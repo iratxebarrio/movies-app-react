@@ -1,0 +1,32 @@
+:root {
+  /**  Custom Properties  */
+
+  /* --primario: #1073ba;
+  --secundario: #00da55;
+  --gris: #3b3b3b;
+  --blanco: #ffffff;
+  --negro: #1f1e1e;
+  --grisClaro: #e1e1e1; */
+
+  --separacion: 5rem;
+
+  --fuentePrincipal: "Roboto", sans-serif;
+  --fuenteSecundaria: "Lato", sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* Ahora 1rem será 10px */
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  /* Para usar la custom propertie */
+  font-family: var(--fuentePrincipal);
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
