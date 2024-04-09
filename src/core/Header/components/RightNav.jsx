@@ -11,16 +11,17 @@ export const RightNav = ({ open }) => {
   const dispatch = useDispatch()
   const {theme} = useSelector((state) => state.themeMode)
   const  {t, i18n}  = useTranslation("global");
-  const [position, setPosition] = useState(false)
   const [themeChanged, setThemeChanged] = useState(theme)
+  console.log(themeChanged, "cha")
 
-console.log(themeChanged, "changed")
 
-const changePosition = () => {
-  themeChanged === 'light' ? setThemeChanged('dark') : setThemeChanged('light')
-  setPosition(!position)
-  dispatch(changeTheme(themeChanged))
-}
+  const changePosition = () => {
+    setThemeChanged(prevTheme => {
+      const newTheme = prevTheme === 'light' ? 'dark' : 'light';
+      dispatch(changeTheme(newTheme));
+      return newTheme;
+    });
+  };
 
 console.log(theme, "theme")
 
@@ -41,8 +42,8 @@ console.log(theme, "theme")
           </TranslateButton>
         </TranslateContainer>
         <div>
-          <button onClick={changePosition} position={position} >
-          {position ? <SunIcon/> : <MoonIcon/> }
+          <button onClick={changePosition}  >
+          {themeChanged === "light" ? <MoonIcon/> :  <SunIcon/> }
             </button>
          
         
