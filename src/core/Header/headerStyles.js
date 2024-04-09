@@ -88,3 +88,23 @@ export const Ul = styled.ul `
         }
     }
 `;
+
+export const TranslateContainer = styled.div `
+ display: flex;
+ align-items: center;
+ justify-content: center;
+
+
+ @media (min-width: 768px ) { 
+
+   align-items: center;
+  }
+
+`;
+export const TranslateButton = styled.button `
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: white;
+  border-radius: 5px;
+
+`;
