@@ -1,7 +1,6 @@
 
 import { Nav } from "../headerStyles"
 import { Burguer } from "./Burguer"
-import { Translation } from "./Translation"
 
 
 export const Navbar = () => {
@@ -11,7 +10,7 @@ export const Navbar = () => {
         Nav Bar
        </div>
        <Burguer/>
-       {/* <Translation/> */}
+
 
     </Nav>
   )

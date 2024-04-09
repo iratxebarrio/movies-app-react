@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Nav = styled.nav`
+background-color: ${({theme}) => theme.bgc};
     width: 100%;    
     height: 55px;
     border-bottom: 2px solid #f1f1f1;

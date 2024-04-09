@@ -1,8 +1,28 @@
 import { TranslateContainer, Ul, TranslateButton } from "../headerStyles";
 import { useTranslation } from "react-i18next";
+import { SunIcon } from "../icons/SunIcon";
+import { MoonIcon } from "../icons/MoonIcon";
+import { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { changeTheme } from "../../../store/theme/themeSlice";
+
 
 export const RightNav = ({ open }) => {
+  const dispatch = useDispatch()
+  const {theme} = useSelector((state) => state.themeMode)
   const  {t, i18n}  = useTranslation("global");
+  const [position, setPosition] = useState(false)
+  const [themeChanged, setThemeChanged] = useState(theme)
+
+console.log(themeChanged, "changed")
+
+const changePosition = () => {
+  themeChanged === 'light' ? setThemeChanged('dark') : setThemeChanged('light')
+  setPosition(!position)
+  dispatch(changeTheme(themeChanged))
+}
+
+console.log(theme, "theme")
 
   return (
     <>
@@ -20,6 +40,13 @@ export const RightNav = ({ open }) => {
             EN
           </TranslateButton>
         </TranslateContainer>
+        <div>
+          <button onClick={changePosition} position={position} >
+          {position ? <SunIcon/> : <MoonIcon/> }
+            </button>
+         
+        
+        </div>
       </Ul>
     </>
   );
