@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-export const themeSlice = createSlice({
+export const settingsSlice = createSlice({
     name: 'theme',
     initialState: 
       localStorage.getItem('settings') 
@@ -18,4 +18,4 @@ export const themeSlice = createSlice({
 });
 
 
-export const { changeTheme, changeLanguage } = themeSlice.actions;
+export const { changeTheme, changeLanguage } = settingsSlice.actions;

@@ -56,7 +56,7 @@ export const StyledBurguer = styled.div `
 
 export const Ul = styled.ul `
     list-style: none;
-    background-color: #0D2538;
+    background-color: ${({theme}) => theme.bgc};
     flex-flow: column nowrap;
     position: fixed;
     transform: ${({open} ) => open ? 'translateX(0)' : 'translateX(100%)'};
@@ -76,7 +76,7 @@ export const Ul = styled.ul `
         flex-direction: row;
         justify-content: flex-end; /* Alinear los elementos al final */
         position: static;
-        background-color: #fff;
+        background-color: ${({theme}) => theme.bgc};
         height: auto;
         width: 100%;
         transform: none;

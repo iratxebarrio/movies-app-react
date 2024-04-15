@@ -4,11 +4,11 @@ import { SunIcon } from "../icons/SunIcon";
 import { MoonIcon } from "../icons/MoonIcon";
 import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { changeTheme, changeLanguage } from "../../../store/theme/themeSlice";
+import { changeTheme, changeLanguage } from "../../../store/settings/settingsSlice";
 
 export const RightNav = ({ open }) => {
   const dispatch = useDispatch();
-  const { theme } = useSelector((state) => state.themeMode);
+  const { theme } = useSelector((state) => state.settings);
   const { t, i18n } = useTranslation("global");
   const currentLanguage = i18n.language;
   const [themeChanged, setThemeChanged] = useState(theme);

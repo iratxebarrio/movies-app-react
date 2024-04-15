@@ -1,5 +1,7 @@
 
+
 import { MoviesToday } from "../components/MoviesToday/MoviesToday"
+import { Slider } from "../components/Slider/Slider";
 import { Navbar } from "../core/Header/components/Navbar"
 
 
@@ -12,6 +14,8 @@ export const Home = () => {
     <>
         {/* <Header/> */}
         <Navbar />
+ 
+        <Slider/>
         <MoviesToday/>
 
 

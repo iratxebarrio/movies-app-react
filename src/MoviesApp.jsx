@@ -13,11 +13,10 @@ const queryClient = new QueryClient();
 
 
 function MoviesApp() {
-  const {theme} = useSelector((state) => state.themeMode)
+  const {theme} = useSelector((state) => state.settings)
 
  
   return (
-  
     <QueryClientProvider client={queryClient}>
       <ThemeProvider theme={Themes[theme]} >
       <BrowserRouter>
