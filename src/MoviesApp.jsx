@@ -1,4 +1,4 @@
-import "./App.css";
+
 import { AppRouter } from "./routes/AppRouter";
 import { BrowserRouter } from "react-router-dom";
 import { QueryClientProvider, QueryClient } from "react-query";

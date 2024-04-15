@@ -1,6 +1,6 @@
 import images from "../../exports/images";
 import { useEffect, useState, useRef } from "react";
-import "./styles.css";
+
 import { 
   SliderContainer, 
   SliderHeadings, 

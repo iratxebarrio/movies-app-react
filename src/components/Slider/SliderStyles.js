@@ -6,36 +6,35 @@ export const SliderContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100vh;
+  max-height: 100rem;
   background: linear-gradient(320deg, #f27121, #e94057, #8a2387);
   flex-direction: column;
 `;
 export const SliderHeadings = styled.div`
-  width: 60%;
-  margin-bottom: 2vw;
-
-  @media (max-width: 416px) {
-    width: 95%;
-  }
+  width: 95%;
+  margin-bottom: .5rem;
+  @media (min-width: 768px ) { 
+    width: 60%;
+   }
 `;
+
 export const SliderTitle = styled.h1`
-  font-size: 3vw;
+  font-size: 2rem;
   text-align: center;
-  padding: 0 20px;
+  padding: 0;
   color: #fff;
-  text-decoration: underline;
-  text-decoration-color: #f27121;
-  text-underline-offset: 0.5vw;
-  @media (max-width: 416px) {
-    font-size: 5vw;
-  }
+
+  @media (min-width: 768px ) { 
+    font-size: 3rem;
+   }
+
 `;
 
 export const SliderWrapper = styled(motion.div)`
   width: 100%;
   display: flex;
   overflow: hidden;
-  padding: 20px;
+  padding: 2rem;
 `;
 
 export const InnerCarousel = styled(motion.div)`
@@ -43,41 +42,34 @@ export const InnerCarousel = styled(motion.div)`
 `;
 
 export const SliderCard = styled.div`
-  width: 300px;
+  width: 30rem;
   background: rgba(255, 255, 255, 0);
-  border-radius: 16px;
-  backdrop-filter: bl(20px);
-  padding: 30px 20px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 1.6rem;
+  backdrop-filter: bl(2rem);
+  padding: 3rem 2rem;
+  box-shadow: 0 .3rem .6rem rgba(0, 0, 0, 0.16), 0 .3rem .6rem rgba(0, 0, 0, 0.23);
   pointer-events: none;
 `;
 export const CardHeader = styled.div`
-  margin-bottom: 16px;
+  margin-bottom: 1.6rem;
 `;
 export const CardTitle = styled.p`
-  font-size: 1vw;
+  font-size: 2rem;
   font-weight: bold;
   color: #000;
-  @media (max-width: 416px) {
-    font-size: 6vw;
-  }
+
 `;
 export const CardSubtitle = styled.p`
-  .sub_title {
-    font-size: 1vw;
+    font-size: 1.5rem;
     color: #eee;
-  }
-  @media (max-width: 416px) {
-    font-size: 5vw;
-  }
 `;
 export const CardImg = styled.div`
   width: 100%;
-  height: 250px;
+  height: 25rem;
   display: block;
-  border-radius: 16px;
+  border-radius: 1.6rem;
   overflow: hidden;
-  margin-bottom: 32px;
+  margin-bottom: 3.2rem;
 `;
 export const Image = styled.img`
   width: 100%;
